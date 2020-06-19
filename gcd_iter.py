@@ -18,3 +18,20 @@ def gcdIter(a, b):
 
 
 print(gcdIter(40, 77))
+
+
+def gcdRecur(a, b):
+    '''
+    a, b: positive integers
+
+    returns: a positive integer, the greatest common divisor of a & b.
+    '''
+    if a == 0:
+        return b
+    elif b == 0:
+        return a
+    else:
+        return gcdRecur(b, a % b)
+
+
+print(gcdRecur(462, 1071))
